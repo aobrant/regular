@@ -1,7 +1,9 @@
 from pprint import pprint
 import csv
 import re
+import decor
 
+@decor.log_decor('hw/pyth')
 def names_order(contackts:list) ->list:
 
 
@@ -16,7 +18,7 @@ def names_order(contackts:list) ->list:
       for i in range (1,len(str2)):
         element[i] = str(str2[i-1])
     if element[5]:
-      # pprint (element[5])
+      # pprint (element[5]) 
       substitution = r'+7(\2)\3-\4-\5 \6\7'
       element[5] = re.sub(pattern, substitution, element[5])
   
